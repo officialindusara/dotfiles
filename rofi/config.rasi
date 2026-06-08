@@ -1,0 +1,79 @@
+configuration {
+    font: "JetBrainsMono NFM 12";
+    icon-theme: "Mint-x";
+    show-icons:true;
+    display-drun: "Search";
+}
+
+* {
+    black:      rgba(0, 0, 0, 0.75); 
+    green:      #2ecc71;
+
+    background:                  @black;
+    foreground:                  @green;
+    border-color:                @green;
+
+    normal-background:           @black;
+    normal-foreground:           @green;
+    alternate-normal-background: @black;
+    alternate-normal-foreground: @green;
+
+    selected-normal-background:  @green;
+    selected-normal-foreground:  @black;
+
+    active-background:           @green;
+    active-foreground:           @black;
+    urgent-background:           @black;
+    urgent-foreground:           @green;
+}
+
+element normal.normal {
+    background-color: transparent;
+}
+
+element alternate.normal {
+    background-color: transparent;
+}
+
+window {
+    width: 37%;
+    height: 39%;
+    padding: 20px;
+    border:  2px;
+    border-radius: 10px;
+    border-color: #2ecc71;
+    background-color: rgba(0,0,0,0.75);
+    spacing: 5;
+}
+
+element-icon {
+    size: 3.0ch;
+    padding: 0px 0px 0px 0px; 
+}
+
+mainbox {
+    orientation: vertical;
+    children: [ inputbar, contentbox ];
+}
+
+contentbox {
+    orientation: horizontal;
+    children: [listview, entry-image ];
+}
+
+entry-image {
+    background-image: url("~/.config/images/icebearmaths.jpg");
+}
+
+element {
+    padding: 4px;
+    border-radius: 4px;
+}
+
+element selected {
+    background-color: @green;
+    text-color: @background;
+}
+
+
+
